@@ -217,7 +217,7 @@ The Monero GUI on Windows is 64 bits only; 32-bit Windows GUI builds are not off
 6. Clone repository
 
     ```
-    git clone https://github.com/GonzoTheDev/crypto-gui.git
+    git clone https://github.com/GonzoTheDev/cryptocoin-gui.git
     ```
 
 7. Build
