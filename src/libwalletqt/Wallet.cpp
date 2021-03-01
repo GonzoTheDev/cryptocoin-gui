@@ -854,7 +854,7 @@ void Wallet::setWalletCreationHeight(quint64 height)
 
 QString Wallet::getDaemonLogPath() const
 {
-    return QString::fromStdString(m_walletImpl->getDefaultDataDir()) + "/swap.log";
+    return QString::fromStdString(m_walletImpl->getDefaultDataDir()) + "/cryptocoin.log";
 }
 
 bool Wallet::blackballOutput(const QString &amount, const QString &offset)

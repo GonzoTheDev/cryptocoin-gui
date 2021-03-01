@@ -1,7 +1,7 @@
 ; Monero Nitrogen Nebula GUI Wallet Installer for Windows
 ; Copyright (c) 2017-2020, The Monero Project
 ; See LICENSE
-#define GuiVersion GetFileVersion("..\..\build\release\bin\swap-wallet-gui.exe")
+#define GuiVersion GetFileVersion("..\..\build\release\bin\cryptocoin-wallet-gui.exe")
 
 [Setup]
 AppName=Swap GUI Wallet
@@ -13,7 +13,7 @@ AppVersion={#GuiVersion}
 VersionInfoVersion={#GuiVersion}
 DefaultDirName={commonpf}\Swap GUI Wallet
 DefaultGroupName=Swap GUI Wallet
-UninstallDisplayIcon={app}\swap-wallet-gui.exe
+UninstallDisplayIcon={app}\cryptocoin-wallet-gui.exe
 PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
@@ -79,7 +79,7 @@ Name: desktopicon; Description: "Create a &desktop icon"; GroupDescription: "Add
 
 
 [Run]
-Filename: "{app}\swap-wallet-gui.exe"; Description: "Run GUI Wallet now"; Flags: postinstall nowait skipifsilent
+Filename: "{app}\cryptocoin-wallet-gui.exe"; Description: "Run GUI Wallet now"; Flags: postinstall nowait skipifsilent
 
 
 [Code]
@@ -97,17 +97,17 @@ end;
 [Icons]
 ; Icons in the "Monero GUI Wallet" program group
 ; Windows will almost always display icons in alphabetical order, per level, so specify the text accordingly
-Name: "{group}\GUI Wallet"; Filename: "{app}\swap-wallet-gui.exe";
+Name: "{group}\GUI Wallet"; Filename: "{app}\cryptocoin-wallet-gui.exe";
 Name: "{group}\Uninstall GUI Wallet"; Filename: "{uninstallexe}"
 
 ; Desktop icons, optional with the help of the "Task" section
-Name: "{commondesktop}\GUI Wallet"; Filename: "{app}\swap-wallet-gui.exe"; Tasks: desktopicon
+Name: "{commondesktop}\GUI Wallet"; Filename: "{app}\cryptocoin-wallet-gui.exe"; Tasks: desktopicon
 
 
 [Registry]
 ; Store any special flags for the daemon in the registry location where the GUI wallet will take it from
 ; So if the wallet is used to start the daemon instead of the separate icon the wallet will pass the correct flags
 ; Side effect, mostly positive: The uninstaller will clean the registry
-Root: HKCU; Subkey: "Software\swap-project"; Flags: uninsdeletekeyifempty
-Root: HKCU; Subkey: "Software\swap-project\swap-core"; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\cryptocoin-project"; Flags: uninsdeletekeyifempty
+Root: HKCU; Subkey: "Software\cryptocoin-project\cryptocoin-core"; Flags: uninsdeletekey
 

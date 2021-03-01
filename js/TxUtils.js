@@ -75,7 +75,7 @@ function isValidOpenAliasAddress(address) {
 }
 
 function makeQRCodeString(addr, amount) {
-    var XMR_URI_SCHEME = "swap:"
+    var XMR_URI_SCHEME = "crypto:"
     var XMR_AMOUNT = "tx_amount"
     var qrCodeString =""
     qrCodeString += (XMR_URI_SCHEME + addr)

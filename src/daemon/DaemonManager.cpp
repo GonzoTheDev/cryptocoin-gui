@@ -121,7 +121,7 @@ bool DaemonManager::start(const QString &flags, NetworkType::Type nettype, const
         arguments << "--max-concurrency" << QString::number(concurrency);
     }
 
-    qDebug() << "starting swapd " + m_monerod;
+    qDebug() << "starting cryptocoind " + m_monerod;
     qDebug() << "With command line arguments " << arguments;
 
     QMutexLocker locker(&m_daemonMutex);
@@ -202,9 +202,9 @@ bool DaemonManager::stopWatcher(NetworkType::Type nettype) const
             if(counter >= 5) {
                 qDebug() << "Killing it! ";
 #ifdef Q_OS_WIN
-                QProcess::execute("taskkill",  {"/F", "/IM", "swapd.exe"});
+                QProcess::execute("taskkill",  {"/F", "/IM", "cryptocoind.exe"});
 #else
-                QProcess::execute("pkill", {"swapd"});
+                QProcess::execute("pkill", {"cryptocoind"});
 #endif
             }
 
@@ -352,9 +352,9 @@ DaemonManager::DaemonManager(QObject *parent)
 
     // Platform depetent path to monerod
 #ifdef Q_OS_WIN
-    m_monerod = QApplication::applicationDirPath() + "/swapd.exe";
+    m_monerod = QApplication::applicationDirPath() + "/cryptocoind.exe";
 #elif defined(Q_OS_UNIX)
-    m_monerod = QApplication::applicationDirPath() + "/swapd";
+    m_monerod = QApplication::applicationDirPath() + "/cryptocoind";
 #endif
 
     if (m_monerod.length() == 0) {

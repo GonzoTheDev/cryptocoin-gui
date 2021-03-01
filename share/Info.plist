@@ -18,7 +18,7 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>swap-wallet-gui</string>
+  <string>cryptocoin-wallet-gui</string>
   
   <key>CFBundleName</key>
   <string>Swap GUI</string>
@@ -27,7 +27,7 @@
   <string>Copyright © 2014-2020 The Monero Project</string>
 
   <key>CFBundleIdentifier</key>
-  <string>one.xwp.swap-wallet-gui</string>
+  <string>cash.crypt-o-coin.cryptocoin-wallet-gui</string>
 
   <key>CFBundleVersion</key>
   <string>@VERSION_LONG@</string>
@@ -45,18 +45,18 @@
   <array>
     <dict>
       <key>CFBundleURLName</key>
-      <string>swap Handler</string>
+      <string>cryptocoin Handler</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>swap</string>
+        <string>cryptocoin</string>
       </array>
     </dict>
     <dict>
       <key>CFBundleURLName</key>
-      <string>swapseed Handler</string>
+      <string>cryptocoinseed Handler</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>swapseed</string>
+        <string>cryptocoinseed</string>
       </array>
     </dict>
   </array>

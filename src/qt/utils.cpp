@@ -99,9 +99,9 @@ QString xdgMime(QApplication &app){
         "Exec=%1 %u\n"
         "Terminal=false\n"
         "Type=Application\n"
-        "Icon=swap\n"
+        "Icon=crypto\n"
         "Categories=Network;GNOME;Qt;\n"
-        "MimeType=x-scheme-handler/swap;x-scheme-handler/swapseed\n"
+        "MimeType=x-scheme-handler/cryptocoin;x-scheme-handler/cryptocoinseed\n"
         "StartupNotify=true\n"
         "X-GNOME-Bugzilla-Bugzilla=GNOME\n"
         "X-GNOME-UsesNotifications=true\n"
@@ -116,7 +116,7 @@ void registerXdgMime(QApplication &app){
     // - Tails written to persistent dotfiles
     QString mime = xdgMime(app);
     QString appPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
-    QString filePath = QString("%1/swap-gui.desktop").arg(appPath);
+    QString filePath = QString("%1/cryptocoin-gui.desktop").arg(appPath);
 
     if (TailsOS::detect() && TailsOS::detectDotPersistence() && TailsOS::usePersistence) {
         TailsOS::persistXdgMime(filePath, mime);

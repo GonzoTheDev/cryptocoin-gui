@@ -7,7 +7,7 @@ TEMPLATE = app
 
 QT += svg qml gui-private quick widgets
 
-WALLET_ROOT=$$PWD/swap
+WALLET_ROOT=$$PWD/crypto
 
 CONFIG += c++11 link_pkgconfig
 packagesExist(libusb-1.0) {
@@ -36,7 +36,7 @@ greaterThan(GCC_VERSION_MAJOR, 9) | if(equals(GCC_VERSION_MAJOR, 9) : greaterTha
     }
 }
 
-# cleaning "auto-generated" swap directory on "make distclean"
+# cleaning "auto-generated" crypto directory on "make distclean"
 QMAKE_DISTCLEAN += -r $$WALLET_ROOT
 
 INCLUDEPATH +=  $$WALLET_ROOT/include \
@@ -374,7 +374,7 @@ linux {
             -lGL \
             -lX11
     }
-    # currently swap has an issue with "static" build and linunwind-dev,
+    # currently crypto has an issue with "static" build and linunwind-dev,
     # so we link libunwind-dev only for non-Ubuntu distros
     CONFIG(libunwind_off) {
         message(Building without libunwind)
@@ -562,7 +562,7 @@ OTHER_FILES += \
 
 DISTFILES += \
     notes.txt \
-    swap/src/wallet/CMakeLists.txt
+    crypto/src/wallet/CMakeLists.txt
 
 VERSION = $$cat('version.js', lines)
 VERSION = $$find(VERSION, 'GUI_VERSION')

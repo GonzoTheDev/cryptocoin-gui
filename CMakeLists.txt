@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(swap-gui)
+project(cryptocoin-gui)
 
 message(STATUS "Initiating compile using CMake ${CMAKE_VERSION}")
 
@@ -13,7 +13,7 @@ option(STATIC "Link libraries statically, requires static Qt")
 option(USE_DEVICE_TREZOR "Trezor support compilation" ON)
 option(ENABLE_PASS_STRENGTH_METER "Disable zxcvbn" OFF)
 option(WITH_SCANNER "Enable webcam QR scanner" OFF)
-option(DEV_MODE "Checkout latest swap master on build" OFF)
+option(DEV_MODE "Checkout latest cryptocoin master on build" OFF)
 
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake")
 include(CheckCCompilerFlag)
@@ -72,15 +72,15 @@ if(GIT_FOUND)
       endif()
     endfunction ()
     message(STATUS "Checking submodules")
-    check_submodule(swap)
+    check_submodule(crypto)
   else()
-    execute_process(COMMAND cd swap && git checkout origin/master)
+    execute_process(COMMAND cd crypto && git checkout origin/master)
   endif()
 endif()
 
-add_subdirectory(swap)
-set_property(TARGET wallet_merged PROPERTY FOLDER "swap")
-get_directory_property(ARCH_WIDTH DIRECTORY "swap" DEFINITION ARCH_WIDTH)
+add_subdirectory(crypto)
+set_property(TARGET wallet_merged PROPERTY FOLDER "crypto")
+get_directory_property(ARCH_WIDTH DIRECTORY "crypto" DEFINITION ARCH_WIDTH)
 get_directory_property(UNBOUND_LIBRARY DIRECTORY "monero" DEFINITION UNBOUND_LIBRARY)
 
 if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -522,5 +522,5 @@ add_subdirectory(translations)
 add_subdirectory(src)
 
 # Required to make wallet_merged build before the gui
-add_dependencies(swap-gui wallet_merged)
+add_dependencies(cryptocoin-gui wallet_merged)
 

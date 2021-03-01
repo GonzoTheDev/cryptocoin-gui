@@ -1,5 +1,5 @@
 #!/bin/bash
-MONERO_URL=https://github.com/swap-dev/swap.git
+MONERO_URL=https://github.com/crypto-dev/crypto.git
 MONERO_BRANCH=master
 
 pushd $(pwd)
@@ -8,12 +8,12 @@ ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $ROOT_DIR/utils.sh
 
 INSTALL_DIR=$ROOT_DIR/wallet
-MONERO_DIR=$ROOT_DIR/swap
+MONERO_DIR=$ROOT_DIR/crypto
 BUILD_LIBWALLET=false
 
 # init and update monero submodule
 if [ ! -d $MONERO_DIR/src ]; then
-    git submodule init swap
+    git submodule init crypto
 fi
 git submodule update --remote
 git -C $MONERO_DIR fetch

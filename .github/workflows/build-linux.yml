@@ -18,4 +18,4 @@ jobs:
     - name: build
       run: ./build.sh
     - name: test qml
-      run: xvfb-run -a build/release/bin/swap-wallet-gui --test-qml
+      run: xvfb-run -a build/release/bin/cryptocoin-wallet-gui --test-qml

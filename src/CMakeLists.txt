@@ -89,13 +89,13 @@ if(APPLE)
     list(APPEND RESOURCES ${ICON})
 endif()
 
-add_executable(swap-wallet-gui ${EXECUTABLE_FLAG} main/main.cpp
+add_executable(cryptocoin-wallet-gui ${EXECUTABLE_FLAG} main/main.cpp
     ${SOURCE_FILES}
     ${PASS_STRENGTH_FILES}
     ${QR_CODE_FILES}
     ${RESOURCES}
 )
-set_property(TARGET swap-gui PROPERTY RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+set_property(TARGET cryptocoin-gui PROPERTY RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 set_target_properties(monero-wallet-gui PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
@@ -104,20 +104,20 @@ set_target_properties(monero-wallet-gui PROPERTIES
 )
 
 # OpenGL
-target_include_directories(swap-wallet-gui PUBLIC ${OPENGL_INCLUDE_DIR})
+target_include_directories(cryptocoin-wallet-gui PUBLIC ${OPENGL_INCLUDE_DIR})
 message(STATUS "OpenGL: include dir at ${OPENGL_INCLUDE_DIR}")
 message(STATUS "OpenGL: libraries at ${OPENGL_LIBRARIES}")
 
-target_include_directories(swap-wallet-gui PUBLIC ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
+target_include_directories(cryptocoin-wallet-gui PUBLIC ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
 
 file(GLOB_RECURSE SRC_SOURCES *.cpp)
 file(GLOB_RECURSE SRC_HEADERS *.h)
 
-target_include_directories(swap-wallet-gui PUBLIC
-	${CMAKE_SOURCE_DIR}/swap/include
-    ${CMAKE_SOURCE_DIR}/swap/src
-    ${CMAKE_SOURCE_DIR}/swap/external/easylogging++
-    ${CMAKE_SOURCE_DIR}/swap/contrib/epee/include
+target_include_directories(cryptocoin-wallet-gui PUBLIC
+	${CMAKE_SOURCE_DIR}/crypto/include
+    ${CMAKE_SOURCE_DIR}/crypto/src
+    ${CMAKE_SOURCE_DIR}/crypto/external/easylogging++
+    ${CMAKE_SOURCE_DIR}/crypto/contrib/epee/include
 	${CMAKE_CURRENT_SOURCE_DIR}
 	${CMAKE_CURRENT_SOURCE_DIR}/daemon
 	${CMAKE_CURRENT_SOURCE_DIR}/libwalletqt
@@ -133,7 +133,7 @@ target_include_directories(swap-wallet-gui PUBLIC
     ${ZBAR_INCLUDE_DIR}
 )
 
-target_compile_definitions(swap-wallet-gui
+target_compile_definitions(cryptocoin-wallet-gui
 	PUBLIC
 	${Qt5Widgets_DEFINITIONS}
     ${Qt5Qml_DEFINITIONS}
@@ -141,7 +141,7 @@ target_compile_definitions(swap-wallet-gui
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
-target_link_libraries(swap-wallet-gui
+target_link_libraries(cryptocoin-wallet-gui
     wallet_merged
     ${LMDB_LIBRARY}
     epee
@@ -164,15 +164,15 @@ target_link_libraries(swap-wallet-gui
 )
 
 if(DEVICE_TREZOR_READY)
-    target_link_libraries(swap-wallet-gui ${TREZOR_DEP_LIBS})
+    target_link_libraries(cryptocoin-wallet-gui ${TREZOR_DEP_LIBS})
 endif()
 
 if(X11_FOUND)
-    target_link_libraries(swap-wallet-gui ${X11_LIBRARIES})
+    target_link_libraries(cryptocoin-wallet-gui ${X11_LIBRARIES})
 endif()
 
 if(WITH_SCANNER)
-    target_link_libraries(swap-wallet-gui
+    target_link_libraries(cryptocoin-wallet-gui
         ${ZBAR_LIBRARIES}
         jpeg
         v4l2
@@ -181,6 +181,6 @@ if(WITH_SCANNER)
     )
 endif()
 
-install(TARGETS swap-wallet-gui
+install(TARGETS cryptocoin-wallet-gui
     DESTINATION ${CMAKE_INSTALL_PREFIX}
 )

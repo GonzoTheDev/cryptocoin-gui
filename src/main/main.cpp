@@ -185,7 +185,7 @@ int main(int argc, char *argv[])
     // enable High DPI scaling
     qputenv("QT_ENABLE_HIGHDPI_SCALING", "1");
 
-    // Turn off colors in swapd log output.
+    // Turn off colors in cryptocoind log output.
     qputenv("TERM", "goaway");
 
     MainApp app(argc, argv);
@@ -201,9 +201,9 @@ int main(int argc, char *argv[])
     }
 #endif
 
-    app.setApplicationName("swap-core");
+    app.setApplicationName("cryptocoin-core");
     app.setOrganizationDomain("xwp.one");
-    app.setOrganizationName("swap-project");
+    app.setOrganizationName("cryptocoin-project");
 
     // Ask to enable Tails OS persistence mode, it affects:
     // - Log file location
@@ -267,7 +267,7 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
 
     // Log settings
     const QString logPath = QDir::toNativeSeparators(getLogPath(parser.value(logPathOption)));
-    Monero::Wallet::init(argv[0], "swap-wallet-gui", logPath.toStdString().c_str(), true);
+    Monero::Wallet::init(argv[0], "cryptocoin-wallet-gui", logPath.toStdString().c_str(), true);
     qInstallMessageHandler(messageHandler);
 
     // loglevel is configured in main.qml. Anything lower than

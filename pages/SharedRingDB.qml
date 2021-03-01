@@ -127,7 +127,7 @@ Rectangle {
                     "transactions. Such a list is maintained by the Swap project and is available on the xwp.one website, " +
                     "and you can import this list here.<br>" +
                     "Alternatively, you can scan the blockchain (and the blockchain of key-reusing Swap clones) yourself " +
-                    "using the swap-blockchain-mark-spent-outputs tool to create a list of known spent outputs.<br>"
+                    "using the crypto-blockchain-mark-spent-outputs tool to create a list of known spent outputs.<br>"
                 ) + translationManager.emptyString
                 sharedRingDBDialog.icon = StandardIcon.Information
                 sharedRingDBDialog.open()

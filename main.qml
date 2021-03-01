@@ -98,8 +98,8 @@ ApplicationWindow {
     property var fiatPriceAPIs: {
         return {
              "coingecko": {
-                 "xwpusd": "https://api.coingecko.com/api/v3/simple/price?ids=swap&vs_currencies=usd",
-                 "xwpeur": "https://api.coingecko.com/api/v3/simple/price?ids=swap&vs_currencies=eur"
+                 "xwpusd": "https://api.coingecko.com/api/v3/simple/price?ids=crypto&vs_currencies=usd",
+                 "xwpeur": "https://api.coingecko.com/api/v3/simple/price?ids=crypto&vs_currencies=eur"
             }
         }
     }
@@ -424,8 +424,8 @@ ApplicationWindow {
     }
 
     function onUriHandler(uri){
-        if(uri.startsWith("swap://")){
-            var address = uri.substring("swap://".length);
+        if(uri.startsWith("crypto://")){
+            var address = uri.substring("crypto://".length);
 
             var params = {}
             if(address.length === 0) return;
@@ -716,7 +716,7 @@ ApplicationWindow {
         // resume refresh
         currentWallet.startRefresh();
         informationPopup.title = qsTr("Daemon failed to start") + translationManager.emptyString;
-        informationPopup.text  = error + ".\n\n" + qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "swapd.exe" : "swapd")
+        informationPopup.text  = error + ".\n\n" + qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "cryptocoind.exe" : "cryptocoind")
         informationPopup.icon  = StandardIcon.Critical
         informationPopup.onCloseCallback = null
         informationPopup.open();
@@ -1056,10 +1056,10 @@ ApplicationWindow {
                 informationPopup.icon = StandardIcon.Critical;
             } else if (received > 0) {
                 if (in_pool) {
-                    informationPopup.text = qsTr("This address received %1 swap, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
+                    informationPopup.text = qsTr("This address received %1 crypto, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
                 }
                 else {
-                    informationPopup.text = qsTr("This address received %1 swap, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
+                    informationPopup.text = qsTr("This address received %1 crypto, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
                 }
             }
             else {
@@ -1154,11 +1154,11 @@ ApplicationWindow {
         // parse & validate incoming JSON
         if(resp._url.startsWith("https://api.coingecko.com/api/v3/")){
              var key = currency === "xwpeur" ? "eur" : "usd";
-             if(!resp.hasOwnProperty("swap") || !resp["swap"].hasOwnProperty(key)){
+             if(!resp.hasOwnProperty("crypto") || !resp["crypto"].hasOwnProperty(key)){
                  appWindow.fiatApiError("Coingecko API has error(s)");
                  return;
              }
-             return resp["swap"][key];
+             return resp["crypto"][key];
         }
     }
 
@@ -1330,7 +1330,7 @@ ApplicationWindow {
         id: persistentSettings
         fileName: {
             if(isTails && tailsUsePersistence)
-                return homePath + "/Persistent/Swap/swap-core.conf";
+                return homePath + "/Persistent/Swap/cryptocoin-core.conf";
             return "";
         }
 
@@ -2015,7 +2015,7 @@ ApplicationWindow {
     function checkUpdates() {
         const version = Version.GUI_VERSION.match(/\d+\.\d+\.\d+\.\d+/);
         if (version) {
-            walletManager.checkUpdatesAsync("swap-gui", "gui", getBuildTag(), version[0]);
+            walletManager.checkUpdatesAsync("cryptocoin-gui", "gui", getBuildTag(), version[0]);
         } else {
             console.error("failed to parse version number", Version.GUI_VERSION);
         }

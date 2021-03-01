@@ -64,8 +64,8 @@ fi
 source ./utils.sh
 pushd $(pwd)
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-MONERO_DIR=swap
-MONEROD_EXEC=swapd
+MONERO_DIR=cryptocoin
+MONEROD_EXEC=cryptocoind
 
 MAKE='make'
 if [[ $platform == *bsd* ]]; then
@@ -93,9 +93,9 @@ if [ "$ANDROID" != true ] && ([ "$platform" == "linux32" ] || [ "$platform" == "
 fi
 
 if [ "$platform" == "darwin" ]; then
-    BIN_PATH=$BIN_PATH/swap-wallet-gui.app/Contents/MacOS/
+    BIN_PATH=$BIN_PATH/cryptocoin-wallet-gui.app/Contents/MacOS/
 elif [ "$platform" == "mingw64" ] || [ "$platform" == "mingw32" ]; then
-    MONEROD_EXEC=swapd.exe
+    MONEROD_EXEC=cryptocoind.exe
 fi
 
 # force version update
@@ -108,10 +108,10 @@ if ! QMAKE=$(find_command qmake qmake-qt5); then
     echo "Failed to find suitable qmake command."
     exit 1
 fi
-$QMAKE ../swap-wallet-gui.pro "$CONFIG" || exit
+$QMAKE ../cryptocoin-wallet-gui.pro "$CONFIG" || exit
 $MAKE || exit 
 
-# Copy swapd to bin folder
+# Copy cryptocoind to bin folder
 if [ "$platform" != "mingw32" ] && [ "$ANDROID" != true ]; then
 cp ../$MONERO_DIR/bin/$MONEROD_EXEC $BIN_PATH
 fi
