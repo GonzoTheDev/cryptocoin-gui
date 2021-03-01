@@ -97,7 +97,7 @@ Rectangle {
             MoneroComponents.TextBlock {
                 id: guiMoneroVersion
                 font.pixelSize: 14
-                text: qsTr("Embedded Swap version: ") + translationManager.emptyString
+                text: qsTr("Embedded Crypto version: ") + translationManager.emptyString
             }
 
             MoneroComponents.TextBlock {
@@ -409,9 +409,9 @@ Rectangle {
 
             MoneroComponents.StandardButton {
                 small: true
-                text: qsTr("Donate to Swap") + translationManager.emptyString
+                text: qsTr("Donate to Crypto") + translationManager.emptyString
                 onClicked: {
-                    middlePanel.sendTo("fh2jc6PbQYd4a5PY3ooPMZiPVniMy4MGcjSRBnoBVc1xLmdCHJ6hc98Ess2hpN2mDgPnCAXtDUUbmjWYutRvdoSr2Nps2o5wc", "", "Donation to Swap Community Fund");
+                    middlePanel.sendTo("cashdj5d7FM9fh1ezdLg6ibJcwy3bkyXjEw6LuVWJTDceECuW4Ypa6aY3mqNEwPorLedHpLzSGrDef6n7CmHVeHb8w3XEVsM6R", "", "Donation to Crypto Community Fund");
                 }
             }
         }

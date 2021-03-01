@@ -83,7 +83,7 @@ QString getAccountName(){
     if (accountName.isEmpty())
         accountName = qgetenv("USERNAME"); // Windows
     if (accountName.isEmpty())
-        accountName = "My Swap Account";
+        accountName = "My Crypto Account";
     return accountName;
 }
 
@@ -91,11 +91,11 @@ QString getAccountName(){
 QString xdgMime(QApplication &app){
     return QString(
         "[Desktop Entry]\n"
-        "Name=Swap GUI\n"
-        "GenericName=Swap-GUI\n"
-        "X-GNOME-FullName=Swap-GUI\n"
-        "Comment=Swap GUI\n"
-        "Keywords=Swap;\n"
+        "Name=Crypto GUI\n"
+        "GenericName=Crypto-GUI\n"
+        "X-GNOME-FullName=Crypto-GUI\n"
+        "Comment=Crypto GUI\n"
+        "Keywords=Crypto;\n"
         "Exec=%1 %u\n"
         "Terminal=false\n"
         "Type=Application\n"

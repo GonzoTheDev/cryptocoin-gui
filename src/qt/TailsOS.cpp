@@ -43,9 +43,9 @@ void TailsOS::showDataPersistenceDisabledWarning()
     msgBox.setText(QObject::tr("Warning: persistence disabled"));
     msgBox.setWindowTitle(QObject::tr("Warning: persistence disabled"));
     msgBox.setInformativeText(
-        QObject::tr("Swap GUI has detected that Tails persistence is "
+        QObject::tr("Crypto GUI has detected that Tails persistence is "
                      "currently disabled. Any configurations you make inside "
-                     "the Swap GUI will not be saved."
+                     "the Crypto GUI will not be saved."
                      "\n\n"
                      "In addition, make sure to not save your wallet on the "
                      "filesystem, as it will be lost at shutdown."
@@ -63,7 +63,7 @@ void TailsOS::showDataPersistenceDisabledWarning()
 void TailsOS::askPersistence()
 {
     QMessageBox msgBox;
-    msgBox.setWindowTitle(QObject::tr("Swap GUI"));
+    msgBox.setWindowTitle(QObject::tr("Crypto GUI"));
     msgBox.setText(QObject::tr("Use Tails persistence?"));
     msgBox.setInformativeText(
         QObject::tr("Persist wallet files and configuration on the encrypted volume?"

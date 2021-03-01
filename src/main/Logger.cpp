@@ -68,7 +68,7 @@ const QString getLogPath(const QString logPath)
     const QFileInfo fi(logPath);
 
     if(TailsOS::detect() && TailsOS::usePersistence)
-        return QDir::homePath() + "/Persistent/Swap/logs/" + defaultLogName;
+        return QDir::homePath() + "/Persistent/crypto/logs/" + defaultLogName;
 
     if(!logPath.isEmpty() && !fi.isDir())
         return fi.absoluteFilePath();

@@ -90,7 +90,7 @@ Rectangle {
                 wrapMode: Text.WordWrap;
                 leftPadding: 0
                 topPadding: 0
-                text: qsTr("This makes it easier to send or receive Swap and reduces errors when typing in addresses manually.") + translationManager.emptyString
+                text: qsTr("This makes it easier to send or receive Crypto and reduces errors when typing in addresses manually.") + translationManager.emptyString
                 width: parent.width
             }
 

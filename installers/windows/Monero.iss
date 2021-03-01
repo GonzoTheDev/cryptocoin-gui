@@ -4,15 +4,15 @@
 #define GuiVersion GetFileVersion("..\..\build\release\bin\cryptocoin-wallet-gui.exe")
 
 [Setup]
-AppName=Swap GUI Wallet
+AppName=Crypto GUI Wallet
 ; For InnoSetup this is the property that uniquely identifies the application as such
 ; Thus it's important to keep this stable over releases
 ; With a different "AppName" InnoSetup would treat a mere update as a completely new application and thus mess up
 
 AppVersion={#GuiVersion}
 VersionInfoVersion={#GuiVersion}
-DefaultDirName={commonpf}\Swap GUI Wallet
-DefaultGroupName=Swap GUI Wallet
+DefaultDirName={commonpf}\Crypto GUI Wallet
+DefaultGroupName=Crypto GUI Wallet
 UninstallDisplayIcon={app}\cryptocoin-wallet-gui.exe
 PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
@@ -21,7 +21,7 @@ WizardSmallImageFile=WizardSmallImage.bmp
 WizardImageFile=FinishImage.bmp
 DisableWelcomePage=no
 LicenseFile=LICENSE
-AppPublisher=The Swap Developer Community
+AppPublisher=The Crypto Developer Community
 AppPublisherURL=https://xwp.one
 TimeStampsInUTC=yes
 CompressionThreads=1

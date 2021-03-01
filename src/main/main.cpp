@@ -225,9 +225,9 @@ int main(int argc, char *argv[])
     #endif
 
     if(isTails && TailsOS::usePersistence){
-        moneroAccountsDir = QDir::homePath() + "/Persistent/Swap/wallets";
+        moneroAccountsDir = QDir::homePath() + "/Persistent/crypto/wallets";
     } else if (!moneroAccountsRootDir.empty()) {
-        moneroAccountsDir = moneroAccountsRootDir.at(0) + "/Swap/wallets";
+        moneroAccountsDir = moneroAccountsRootDir.at(0) + "/crypto/wallets";
     } else {
         qCritical() << "Error: accounts root directory could not be set";
         return 1;
@@ -475,7 +475,7 @@ Verify update binary using 'shasum'-compatible (SHA256 algo) output signed by tw
     if (accountName.isEmpty())
         accountName = qgetenv("USERNAME"); // Windows
     if (accountName.isEmpty())
-        accountName = "My Swap Account";
+        accountName = "My Crypto Account";
 
     engine.rootContext()->setContextProperty("defaultAccountName", accountName);
     engine.rootContext()->setContextProperty("homePath", QDir::homePath());

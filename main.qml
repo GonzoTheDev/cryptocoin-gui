@@ -50,7 +50,7 @@ import "version.js" as Version
 
 ApplicationWindow {
     id: appWindow
-    title: "Swap" + (walletName ? " - " + walletName : "")
+    title: "Crypto" + (walletName ? " - " + walletName : "")
     minimumWidth: 750
     minimumHeight: 450
 
@@ -759,7 +759,7 @@ ApplicationWindow {
 
     function onWalletMoneySent(txId, amount) {
         // refresh transaction history here
-        console.log("Swap sent found")
+        console.log("Crypto sent found")
         currentWallet.history.refresh(currentWallet.currentSubaddressAccount); // this will refresh model
 
         if(middlePanel.state == "History")
@@ -972,7 +972,7 @@ ApplicationWindow {
                     txid_text += ", "
                 txid_text += txid[i]
             }
-            informationPopup.text  = (viewOnly)? qsTr("Transaction saved to file: %1").arg(path) : qsTr("Swap sent successfully: %1 transaction(s) ").arg(txid.length) + txid_text + translationManager.emptyString
+            informationPopup.text  = (viewOnly)? qsTr("Transaction saved to file: %1").arg(path) : qsTr("Crypto sent successfully: %1 transaction(s) ").arg(txid.length) + txid_text + translationManager.emptyString
             informationPopup.icon  = StandardIcon.Information
             if (transactionDescription.length > 0) {
                 for (var i = 0; i < txid.length; ++i)
@@ -1330,7 +1330,7 @@ ApplicationWindow {
         id: persistentSettings
         fileName: {
             if(isTails && tailsUsePersistence)
-                return homePath + "/Persistent/Swap/cryptocoin-core.conf";
+                return homePath + "/Persistent/crypto/cryptocoin-core.conf";
             return "";
         }
 
