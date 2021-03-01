@@ -2235,8 +2235,8 @@ Puedes cambiar la contraseña en las opciones del monedero.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Fondos gastables: %1 XWP, Por favor esperar ~%2 minutos para que todo tu balance se vuelva gastable.</translation>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Fondos gastables: %1 CRYPTO, Por favor esperar ~%2 minutos para que todo tu balance se vuelva gastable.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="354"/>
@@ -2341,8 +2341,8 @@ Puedes cambiar la contraseña en las opciones del monedero.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
-        <translation>Gastar XWP desde un monedero frio (fuera de línea)</translation>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
+        <translation>Gastar CRYPTO desde un monedero frio (fuera de línea)</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="593"/>

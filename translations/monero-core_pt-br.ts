@@ -2141,8 +2141,8 @@ Você pode alterar a senha nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Fundos disponíveis:%1 XWP. Aguarde ~%2 minutos para que todo o seu saldo se torne disponível.</translation>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Fundos disponíveis:%1 CRYPTO. Aguarde ~%2 minutos para que todo o seu saldo se torne disponível.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="284"/>
@@ -2282,8 +2282,8 @@ Você pode alterar a senha nas configurações da carteira.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
-        <translation>Gastar XWP de uma carteira fria (offline)</translation>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
+        <translation>Gastar CRYPTO de uma carteira fria (offline)</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="593"/>

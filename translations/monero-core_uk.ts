@@ -2250,7 +2250,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2360,7 +2360,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3686,7 +3686,7 @@ your input may be required.</source>
     <message>
         <location filename="../main.qml" line="1054"/>
         <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Цей адрес отримав %1 XWP, із %2 підтвердженням(и).</translation>
+        <translation>Цей адрес отримав %1 CRYPTO, із %2 підтвердженням(и).</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1065"/>
@@ -3747,7 +3747,7 @@ your input may be required.</source>
     <message>
         <location filename="../main.qml" line="1051"/>
         <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Цей адрес отримав %1 XWP, але транзакція ще не була підтверджена майнерами</translation>
+        <translation>Цей адрес отримав %1 CRYPTO, але транзакція ще не була підтверджена майнерами</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1058"/>

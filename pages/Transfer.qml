@@ -159,7 +159,7 @@ Rectangle {
           visible: leftPanel.minutesToUnlock !== ""
 
           MoneroComponents.WarningBox {
-              text: qsTr("Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.").arg(leftPanel.balanceUnlockedString).arg(leftPanel.minutesToUnlock)
+              text: qsTr("Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.").arg(leftPanel.balanceUnlockedString).arg(leftPanel.minutesToUnlock)
           }
       }
 
@@ -177,11 +177,11 @@ Rectangle {
               labelButtonText: qsTr("Resolve") + translationManager.emptyString
               placeholderText: {
                   if(persistentSettings.nettype == NetworkType.MAINNET){
-                      return "fh.. / fs.. / fi..";
+                      return "cash..";
                   } else if (persistentSettings.nettype == NetworkType.STAGENET){
-                      return "fh..";
+                      return "c..";
                   } else if(persistentSettings.nettype == NetworkType.TESTNET){
-                      return "TN..";
+                      return "cr..";
                   }
               }
               wrapMode: Text.WrapAnywhere
@@ -351,7 +351,7 @@ Rectangle {
                         if (!sendButton.enabled || estimatedFee == null) {
                             return ""
                         }
-                        return "%1: ~%2 XWP".arg(qsTr("Fee")).arg(estimatedFee) +
+                        return "%1: ~%2 CRYPTO".arg(qsTr("Fee")).arg(estimatedFee) +
                             estimatedFeeFiat +
                             translationManager.emptyString;
                     }
@@ -587,7 +587,7 @@ Rectangle {
                 console.log("Transfer: submit tx clicked")
                 submitTxDialog.open();
             }
-            helpTextLarge.text: qsTr("Spend XWP from a cold (offline) wallet") + translationManager.emptyString
+            helpTextLarge.text: qsTr("Spend CRYPTO from a cold (offline) wallet") + translationManager.emptyString
             helpTextSmall.text: {
                 var errorMessage = "";
                 if (appWindow.viewOnly && !pageRoot.checkInformation(amountLine.text, addressLine.text, appWindow.persistentSettings.nettype)){

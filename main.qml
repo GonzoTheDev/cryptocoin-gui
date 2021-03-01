@@ -93,8 +93,8 @@ ApplicationWindow {
     property bool themeTransition: false
 
     // fiat price conversion
-    property real fiatPriceXWPUSD: 0
-    property real fiatPriceXWPEUR: 0
+    property real fiatPriceCRYPTOUSD: 0
+    property real fiatPriceCRYPTOEUR: 0
     property var fiatPriceAPIs: {
         return {
              "coingecko": {
@@ -1206,9 +1206,9 @@ ApplicationWindow {
         }
 
         if(persistentSettings.fiatPriceCurrency === "xwpusd")
-            appWindow.fiatPriceXWPUSD = ticker;
+            appWindow.fiatPriceCRYPTOUSD = ticker;
         else if(persistentSettings.fiatPriceCurrency === "xwpeur")
-            appWindow.fiatPriceXWPEUR = ticker;
+            appWindow.fiatPriceCRYPTOEUR = ticker;
 
         appWindow.updateBalance();
     }
@@ -1247,7 +1247,7 @@ ApplicationWindow {
     }
 
     function fiatApiConvertToFiat(amount) {
-        var ticker = persistentSettings.fiatPriceCurrency === "xwpusd" ? appWindow.fiatPriceXWPUSD : appWindow.fiatPriceXWPEUR;
+        var ticker = persistentSettings.fiatPriceCurrency === "xwpusd" ? appWindow.fiatPriceCRYPTOUSD : appWindow.fiatPriceCRYPTOEUR;
         if(ticker <= 0){
             console.log(fiatApiError("Invalid ticker value: " + ticker));
             return "?.??";

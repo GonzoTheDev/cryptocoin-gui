@@ -2246,8 +2246,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Fondi spendibili: %1 XWP. Attendi ~%2 minuti affinché l&apos;intero saldo diventi spendibile.</translation>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Fondi spendibili: %1 CRYPTO. Attendi ~%2 minuti affinché l&apos;intero saldo diventi spendibile.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="284"/>
@@ -2361,7 +2361,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

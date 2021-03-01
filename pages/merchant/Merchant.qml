@@ -449,7 +449,7 @@ Item {
                         font.pixelSize: 14
                         font.bold: false
                         color: "white"
-                        text: qsTr("Amount to receive") + " (XWP)" + translationManager.emptyString
+                        text: qsTr("Amount to receive") + " (CRYPTO)" + translationManager.emptyString
                         themeTransition: false
                     }
 

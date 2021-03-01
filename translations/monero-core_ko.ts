@@ -2122,7 +2122,7 @@ You can change the password in the wallet settings.</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2258,7 +2258,7 @@ You can change the password in the wallet settings.</source>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3552,7 +3552,7 @@ Spending address index: </source>
     <message>
         <location filename="../main.qml" line="1054"/>
         <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>이 주소로 %1 XWP을 받아, %2 번의 컨펌을 받았습니다.</translation>
+        <translation>이 주소로 %1 CRYPTO을 받아, %2 번의 컨펌을 받았습니다.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1620"/>
@@ -3656,7 +3656,7 @@ your input may be required.</source>
     <message>
         <location filename="../main.qml" line="1051"/>
         <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>이 주소는 % 1XWP을 받았지만, 해당 거래가 아직 채굴에 포함되지 않았습니다</translation>
+        <translation>이 주소는 % 1CRYPTO을 받았지만, 해당 거래가 아직 채굴에 포함되지 않았습니다</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1058"/>

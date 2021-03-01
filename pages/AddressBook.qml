@@ -296,11 +296,11 @@ Rectangle {
                     .arg(qsTr("Address")) + translationManager.emptyString
                 placeholderText: {
                     if(persistentSettings.nettype == NetworkType.MAINNET){
-                        return "fh.. / fs.. / fi..";
+                        return "cash..";
                     } else if (persistentSettings.nettype == NetworkType.STAGENET){
-                        return "fh..";
+                        return "c..";
                     } else if(persistentSettings.nettype == NetworkType.TESTNET){
-                        return "TN..";
+                        return "cr..";
                     }
                 }
                 wrapMode: Text.WrapAnywhere

@@ -232,12 +232,12 @@ Rectangle {
 
                 MoneroComponents.TextPlain {
                     id: currencyLabel
-                    font.pixelSize: 16
+                    font.pixelSize: 24
                     text: {
                         if (persistentSettings.fiatPriceEnabled && persistentSettings.fiatPriceToggle) {
                             return appWindow.fiatApiCurrencySymbol();
                         } else {
-                            return "XWP"
+                            return "₡"
                         }
                     }
                     color: MoneroComponents.Style.blackTheme ? "white" : "black"

@@ -2275,7 +2275,7 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="589"/>
-        <source>Spend XWP from a cold (offline) wallet</source>
+        <source>Spend CRYPTO from a cold (offline) wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2360,8 +2360,8 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="163"/>
-        <source>Spendable funds: %1 XWP. Please wait ~%2 minutes for your whole balance to become spendable.</source>
-        <translation>Verfügbares Guthaben: %1 XWP. Bitte warte ~%2 Minuten, bis dein gesamtes Guthaben verfügbar ist.</translation>
+        <source>Spendable funds: %1 CRYPTO. Please wait ~%2 minutes for your whole balance to become spendable.</source>
+        <translation>Verfügbares Guthaben: %1 CRYPTO. Bitte warte ~%2 Minuten, bis dein gesamtes Guthaben verfügbar ist.</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="284"/>
