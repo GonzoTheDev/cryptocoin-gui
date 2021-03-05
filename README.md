@@ -2,7 +2,7 @@
 
 Copyright (c) 2014-2019, The Monero Project
 
-![Build-Linux](https://github.com/GonzoTheDev/crypto-gui/workflows/Build-Linux/badge.svg)
+![Build-Linux](https://github.com/swap-dev/swap-gui/workflows/Build-Linux/badge.svg)
 
 ## Resources
 
@@ -139,7 +139,7 @@ The following instructions will fetch Qt from your distribution's repositories i
 4. Build
 
     ```
-    cd monero-gui
+    cd cryptocoin-gui
     QT_SELECT=5 ./build.sh
     ```
 
@@ -170,7 +170,7 @@ The executable can be found in the build/release/bin folder.
 
 7. Go into the repository
 
-  `cd monero-gui`
+  `cd cryptocoin-gui`
 
 8. Start the build
 
