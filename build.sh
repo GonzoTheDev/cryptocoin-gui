@@ -64,7 +64,7 @@ fi
 source ./utils.sh
 pushd $(pwd)
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-MONERO_DIR=cryptocoin
+MONERO_DIR=crypto
 MONEROD_EXEC=cryptocoind
 
 MAKE='make'
