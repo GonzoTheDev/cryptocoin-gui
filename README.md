@@ -15,12 +15,6 @@ Copyright (c) 2021, The CryptoCoin Project
 - Pool List: [miningpoolstats.stream/crypto](https://miningpoolstats.stream/crypto)
 - Markets: [coinmarketcap.com](https://coinmarketcap.com/currencies/crypto/markets/)
 
-# Original Readme:
-
-## Vulnerability response
-
-- Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
-- We are also available via [HackerOne](https://hackerone.com/monero)
 
 ## Introduction
 
