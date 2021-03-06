@@ -166,7 +166,7 @@ The executable can be found in the build/release/bin folder.
 
 6. Grab an up-to-date copy of the monero-gui repository
 
-  `git clone https://github.com/monero-project/monero-gui.git`
+  `git clone --recursive https://github.com/monero-project/monero-gui.git`
 
 7. Go into the repository
 
