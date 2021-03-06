@@ -164,15 +164,19 @@ The executable can be found in the build/release/bin folder.
   - Example for Qt: `export PATH=$PATH:$HOME/Qt/5.9.7/clang_64/bin`
   - Example for Homebrew: `export PATH=$PATH:/usr/local/opt/qt/bin`
 
-6. Grab an up-to-date copy of the monero-gui repository
+6. Add the crypto source code with submodules recursively
 
-  `git clone --recursive https://github.com/monero-project/monero-gui.git`
+   `git clone --recursive https://github.com/GonzoTheDev/crypto.git`
 
-7. Go into the repository
+7. Grab an up-to-date copy of the cryptocoin-gui repository
+
+  `git clone https://github.com/GonzoTheDev/cryptocoin-gui.git`
+
+8. Go into the repository
 
   `cd cryptocoin-gui`
 
-8. Start the build
+9. Start the build
 
   `./build.sh`
 
