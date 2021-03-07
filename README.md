@@ -158,6 +158,8 @@ The executable can be found in the build/release/bin folder.
 
 The executable can be found in the `build/release/bin` folder.
 
+*Notable issues in the original monero-gui repo: [issue:101](https://github.com/monero-project/monero-gui/issues/101)
+
 ### On Windows:
 
 The CryptoCoin GUI on Windows is 64 bits only; 32-bit Windows GUI builds are not officially supported anymore.
