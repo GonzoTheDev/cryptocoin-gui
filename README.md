@@ -12,7 +12,7 @@ Copyright (c) 2021, The CryptoCoin Project
 - Discord: [https://discord.gg/upPCtgcMJu](https://discord.gg/upPCtgcMJu)
 - Explorer: [explorer.crypt-o-coin.cash](https://explorer.crypt-o-coin.cash/)
 - Reference Pool: [mining.crypt-o-coin.cash](https://mining.crypt-o-coin.cash)
-- Pool List: [miningpoolstats.stream/crypto](https://miningpoolstats.stream/crypto)
+- Pool List: [miningpoolstats.stream/cryptocoin](https://miningpoolstats.stream/cryptocoin)
 - Markets: [coinmarketcap.com](https://coinmarketcap.com/currencies/crypto/markets/)
 
 
