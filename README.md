@@ -133,11 +133,11 @@ The executable can be found in the build/release/bin folder.
 
 4. Install Qt:
 
-  `brew install qt5`  (or download QT 5.9.7+ from [qt.io](https://www.qt.io/download-open-source/))
+  `brew install qt5`  (or download QT 5.15.2+ from [qt.io](https://www.qt.io/download-open-source/))
 
 5. Add the Qt bin directory to your path
 
-  - Example for Qt: `export PATH=$PATH:$HOME/Qt/5.9.7/clang_64/bin`
+  - Example for Qt: `export PATH=$PATH:$HOME/Qt/5.15.2/clang_64/bin`
   - Example for Homebrew: `export PATH=$PATH:/usr/local/opt/qt/bin`
 
 6. Grab an up-to-date copy of the cryptocoin-gui repository
