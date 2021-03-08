@@ -152,7 +152,11 @@ The executable can be found in the build/release/bin folder.
 
   `./get_libwallet_api.sh`
   
-9. Start the build
+9. Dirty fix for pragma error
+
+`sed -i '' '53 s/^/\/\//' crypto/src/crypto/cn_slow_hash.hpp`
+  
+10. Start the build
 
   `./build.sh`
 
