@@ -129,7 +129,7 @@ The executable can be found in the build/release/bin folder.
 
 3. Install [cryptocoin](https://github.com/GonzoTheDev/crypto) dependencies:
 
-  `brew install boost hidapi zmq libpgm miniupnpc ldns expat libunwind-headers protobuf libgcrypt PkgConfig openssl`
+  `brew install boost hidapi zmq libpgm miniupnpc ldns expat libunwind-headers protobuf libgcrypt PkgConfig openssl cmake`
 
 4. Install Qt:
 
