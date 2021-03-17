@@ -110,7 +110,7 @@ The following instructions will fetch Qt from your distribution's repositories i
 
 3. Clone repository
 
-    `git clone https://github.com/GonzoTheDev/cryptocoin-gui.git`
+    `git clone --recursive https://github.com/GonzoTheDev/cryptocoin-gui.git`
 
 4. Build
 
@@ -142,7 +142,7 @@ The executable can be found in the build/release/bin folder.
 
 6. Grab an up-to-date copy of the cryptocoin-gui repository
 
-  `git clone https://github.com/GonzoTheDev/cryptocoin-gui.git`
+  `git clone --recursive https://github.com/GonzoTheDev/cryptocoin-gui.git`
 
 7. Go into the repository
 
@@ -203,7 +203,7 @@ The CryptoCoin GUI on Windows is 64 bits only; 32-bit Windows GUI builds are not
 6. Clone repository
 
     ```
-    git clone https://github.com/GonzoTheDev/cryptocoin-gui.git
+    git clone --recursive https://github.com/GonzoTheDev/cryptocoin-gui.git
     ```
 
 7. Build
